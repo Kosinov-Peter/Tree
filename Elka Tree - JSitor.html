@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+	<button onclick="functionToExecute()" type="button">Я кнопка</button>
+
+</head>
+
+<body>
+	<!DOCTYPE html>
+	<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Бесконечный скроллинг с добавлением картинок</title>
+		<style>
+			/* Добавляем немного стилей для наглядности скроллинга */
+			#infinite-scroll div {
+				margin-bottom: -150px;
+			}
+
+			img {
+				margin: 10px auto 20px;
+    			display: block;
+				align: "center";
+				max-width: 100%;
+				/* Чтобы изображение не выходило за рамки экрана */
+				height: auto;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div id="infinite-scroll">
+			<!-- Оставляем пустой див, который будет заполняться картинками при скроллинге -->
+		</div>
+		<script>
+			var i = 100;
+			function functionToExecute() {
+				let imageUrl = 'https://sun9-29.userapi.com/impf/uTnyYM8YfJ_m_jkBx7oJiBc6u9tX37K_chnuAA/Gmua5fVopHg.jpg?size=368x171&quality=96&sign=daa7770c546fa95047aa96018862d151&type=album';
+				var element = document.getElementById("width");
+				//element.
+				block.innerHTML += '<div><img src="' + imageUrl + '" width=' + i + ' alt="Дерево"></div>';
+				i += 100;
+  			}
+			window.addEventListener("scroll", function() {  
+			var block = document.getElementById('infinite-scroll');  
+			var contentHeight = block.offsetHeight;  
+			var yOffset = window.pageYOffset;  
+			var window_height = window.innerHeight;  
+			var y = yOffset + window_height;  
+			
+			// если пользователь достиг конца  
+			if(y >= contentHeight) {  
+			// добавляем новую картинку  
+			} 
+			}); 
+  
+			// Чтобы начальный экран не был пустым, заполним его несколькими картинками  
+			var block = document.getElementById('infinite-scroll');  
+			for(let i = 0; i < 1; i++) {  
+			let imageUrl = 'https://sun9-77.userapi.com/impf/6rToxbk0AlSnPotD2ptES6mF1efMJ122vIzTKw/yjEsq1jO4N4.jpg?size=1350x629&quality=95&sign=7cec7dd6e347afe35d059d9e52871479&type=album'; 
+			block.innerHTML += '<div><img src="' + imageUrl + '" alt="Дерево"></div>'; 
+			} 
+		</script>
+	</body>
+
+	</html>
+	<script type="text/javascript"></script>
+</body>
+<html>
